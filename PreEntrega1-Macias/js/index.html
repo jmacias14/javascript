@@ -8,7 +8,7 @@
     <title>Calculadora Steam</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 
 </head>
 
@@ -31,17 +31,28 @@
         </div>
     </nav>
     <!-- FIN HEADER -->
-    <div class="entradaprecio mx-5">
-    <label for="inputPassword5" class="form-label">Precio del Juego</label>
-    <input type="text" id="precioJuego" class="form-control" aria-describedby="precioJuegoArea">
-    <div id="precioJuegoArea" class="form-text">
-       Ingrese el precio del juego en pesos, separando los centavos con un .
+    <form class="mx-4" id="calculadoraPrecio">
+        <div class="mb-3 ">
+            <label for="precioJuego" class="form-label">Precio del Juego</label>
+            <input type="number" class="form-control" id="precioJuego" aria-describedby="precioAyuda">
+            <div id="precioAyuda" class="form-text">Ingrese el precio del juego en pesos, separado por un .</div>
+        </div>
+        <button type="button" class="btn btn-dark" id="botonCalcular">Calcular</button>
+    </form>
+    <hr class="mx-4">
+    <div id=campoPrecio>
+        <p class="mx-4">El precio de tu juego con impuestos incluidos es de:</p>
+        <p class="mx-4 fs-4" id="precioFinal"></p>
     </div>
-</div>
+
+
+
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 
