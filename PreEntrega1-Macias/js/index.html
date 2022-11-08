@@ -14,10 +14,10 @@
 
 <body>
     <!-- HEADER -->
-    <nav class="navbar navbar-expand-lg bg-light">
+    <nav class="navbar navbar-expand-lg bg-light mb-3">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Stimpuestos</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <a class="navbar-brand text-white" href="#">STIMPUESTOS</a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -31,18 +31,21 @@
         </div>
     </nav>
     <!-- FIN HEADER -->
-    <form class="mx-4" id="calculadoraPrecio">
+    <form class="mx-4 " id="calculadoraPrecio">
         <div class="mb-3 ">
             <label for="precioJuego" class="form-label">Precio del Juego</label>
-            <input type="number" class="form-control" id="precioJuego" aria-describedby="precioAyuda">
             <div id="precioAyuda" class="form-text">Ingrese el precio del juego en pesos, separado por un .</div>
+            <input type="number" class="form-control entradaPrecio" id="precioJuego" aria-describedby="precioAyuda">
+            <input type="checkbox" id="checkMasDe300" onclick="change()" class="checkMasDe300">
+            <label class="form-check-label form-text" for="checkMasDe300" checked="false">Seleccionar si gastaste mas de
+                USD$300 durante este mes</label>
         </div>
         <button type="button" class="btn btn-dark" id="botonCalcular">Calcular</button>
     </form>
     <hr class="mx-4">
     <div id=campoPrecio>
         <p class="mx-4">El precio de tu juego con impuestos incluidos es de:</p>
-        <p class="mx-4 fs-4" id="precioFinal"></p>
+        <p class="mx-4 fs-4" id="campoPrecioFinal"></p>
     </div>
 
 
